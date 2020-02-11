@@ -4,7 +4,7 @@
   "description": "This is a CMS using Firebase and jQuery",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass scss/styles.scss css/styles.css -w"
+    "sass": "node-sass public/scss/styles.scss public/css/styles.css -w"
   },
   "repository": {
     "type": "git",
