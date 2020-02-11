@@ -5,6 +5,10 @@ function initButtons() {
 
     $(".text-wrapper").html(TREEFROG_SERVICE.getGetStartedContent());
     $(".btn-holder").html(TREEFROG_SERVICE.getCreateNavButtons());
+
+    $(".createMainNav").click(function() {
+      $(".modal").css("display", "flex");
+    });
   });
 
   $("#home").click(function() {
