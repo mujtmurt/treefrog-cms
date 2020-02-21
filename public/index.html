@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Treefrog | CMS</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://cdn.quilljs.com/1.3.6/quill.snow.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav class="nav">
@@ -57,7 +61,29 @@
     </div>
 
     <div class="modal">
-      <div class="alert-box"></div>
+      <div class="clickBox">
+        <div class="x-btn">x</div>
+      </div>
+      <div class="alert-box">
+        <div>
+          <h2>Use this box to create Navigation Links</h2>
+          <p>
+            You can create main navigation and sub navigation. To create a
+            sub-navigation you will need to first select a main nav and then
+            create the sub-nav.
+          </p>
+          <p>
+            Using the text box below, enter the name of your main navigation.
+          </p>
+          <input id="navInput" type="text" />
+        </div>
+        <div>
+          <span id="createMainNav" class="btn btn-light get-started">
+            Create Main Nav
+          </span>
+          <span class="btn btn-light cancel">Cancel</span>
+        </div>
+      </div>
     </div>
 
     <script defer src="/__/firebase/7.8.1/firebase-app.js"></script>
@@ -69,6 +95,8 @@
     <script defer src="/__/firebase/7.8.1/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
+
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
     <script src="lib/jquery.min.js"></script>
     <script src="app/service.js"></script>

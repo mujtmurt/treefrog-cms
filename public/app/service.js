@@ -39,10 +39,34 @@ var TREEFROG_SERVICE = (function() {
     return startButton;
   };
 
+  var _getCreateMainNav = function() {
+    var createdNav = `   <h1>TreeFrog CMS</h1>
+    <p style="margin-bottom: 100px">
+      Now you have your navigation set now you can create your content. Below
+      you will see your navigation name and a text editor. Create your content
+      in the text editor and then click on "Save Page Info". Once you have done
+      that click on "PREVIEW SITE" to see what your web page looks like.
+    </p>
+
+    <h3 class="outputValue"></h3>
+
+    <div id="editor"></div>`;
+
+    return createdNav;
+  };
+
+  var _getSavePageInfo = function() {
+    var savePage = `<span class="btn btn-dark save-page">Save Page Info</span>`;
+
+    return savePage;
+  };
+
   return {
     getGetStartedContent: _getGetStartedContent,
     getCreateNavButtons: _getCreateNavButtons,
     getHomeContent: _getHomeContent,
-    getHomeStartButton: _getHomeStartButton
+    getHomeStartButton: _getHomeStartButton,
+    getCreateMainNav: _getCreateMainNav,
+    getSavePageInfo: _getSavePageInfo
   };
 })();

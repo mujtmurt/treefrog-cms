@@ -12,20 +12,70 @@
   color: $white-color;
 }
 
+.btn-light {
+  background-color: $light-color;
+  color: $dark-color;
+}
+
 .modal {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba($white-color, 0.5);
   display: none;
 
+  .clickBox {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($white-color, 0.5);
+
+    .x-btn {
+      position: absolute;
+      top: 100px;
+      right: 50px;
+      font-size: 50px;
+      cursor: pointer;
+      color: $dark-color;
+      text-shadow: 2px 2px $light-color;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+  }
+
   .alert-box {
+    position: relative;
+    z-index: 99;
+
     width: 600px;
-    height: 350px;
+    min-height: 400px;
     background-color: $dark-color;
     margin: auto;
+    padding: 30px;
     border-radius: 10px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    h2,
+    p {
+      color: $white-color;
+    }
+
+    input {
+      outline: none;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 15px;
+    }
+
+    input[type="text"] {
+      text-align: center;
+    }
   }
 }

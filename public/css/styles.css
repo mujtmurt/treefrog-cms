@@ -29,20 +29,55 @@ p {
   background-color: #393c40;
   color: #f2f2f2; }
 
+.btn-light {
+  background-color: #f3dcc9;
+  color: #393c40; }
+
 .modal {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(242, 242, 242, 0.5);
   display: none; }
+  .modal .clickBox {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(242, 242, 242, 0.5); }
+    .modal .clickBox .x-btn {
+      position: absolute;
+      top: 100px;
+      right: 50px;
+      font-size: 50px;
+      cursor: pointer;
+      color: #393c40;
+      text-shadow: 2px 2px #f3dcc9;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; }
   .modal .alert-box {
+    position: relative;
+    z-index: 99;
     width: 600px;
-    height: 350px;
+    min-height: 400px;
     background-color: #393c40;
     margin: auto;
-    border-radius: 10px; }
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; }
+    .modal .alert-box h2,
+    .modal .alert-box p {
+      color: #f2f2f2; }
+    .modal .alert-box input {
+      outline: none;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 15px; }
+    .modal .alert-box input[type="text"] {
+      text-align: center; }
 
 .nav {
   position: fixed;
