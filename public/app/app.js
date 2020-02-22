@@ -53,26 +53,57 @@ function toggleModal() {
 
 function inputCheck() {
   var enteredInput = document.getElementById("navInput").value;
+  var lowercaseValue = enteredInput.toLowerCase();
+  var navArray = ["home", "about", "products"];
+  var notDuplicate = true;
 
-  // THIS CHECKS IF THERE'S ANYTHING IN THE INPUT AND LOWERCASES THE VALUE
-  if (enteredInput) {
-    var lowercaseValue = enteredInput.toLowerCase();
-    alert(`Navigation created for ${lowercaseValue}`);
+  for (var i = 0; i < navArray.length; i++) {
+    if (navArray[i] === lowercaseValue) {
+      notDuplicate = false;
+      alert("This navigation is already created.");
+    }
+  }
+
+  if (enteredInput && notDuplicate) {
+    alert(`Navigation - ${enteredInput} has been created`);
+
+    navArray.push(lowercaseValue);
+    console.log(navArray);
 
     $(".modal").css("display", "none");
     $(".text-wrapper").html(TREEFROG_SERVICE.getCreateMainNav());
     $(".btn-holder").html(TREEFROG_SERVICE.getSavePageInfo());
     $(".outputValue").html(`Nav > ${enteredInput}`);
-  }
-
-  // THIS IS IF YOU DON'T ENTER ANYTHING
-  else {
+  } else if (!enteredInput) {
     alert("Please enter the name for your navigation.");
   }
 }
 
+var toolbarOptions = [
+  ["bold", "italic", "underline", "strike"], // toggled buttons
+  ["blockquote", "code-block"],
+
+  [{ header: 1 }, { header: 2 }], // custom button values
+  [{ list: "ordered" }, { list: "bullet" }],
+  [{ script: "sub" }, { script: "super" }], // superscript/subscript
+  [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
+  [{ direction: "rtl" }], // text direction
+
+  [{ size: ["small", false, "large", "huge"] }], // custom dropdown
+  [{ header: [1, 2, 3, 4, 5, 6, false] }],
+
+  [{ color: [] }, { background: [] }], // dropdown with defaults from theme
+  [{ font: [] }],
+  [{ align: [] }],
+
+  ["clean"] // remove formatting button
+];
+
 function quillEditor() {
   var quill = new Quill("#editor", {
+    modules: {
+      toolbar: toolbarOptions
+    },
     theme: "snow"
   });
 }
