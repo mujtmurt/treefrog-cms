@@ -125,5 +125,8 @@ p {
   color: #393c40;
   padding: 110px 30px 30px 30px; }
   .content-wrapper .text-wrapper {
-    width: 30%;
+    width: 80%;
     margin-bottom: 40px; }
+
+.ql-align-center {
+  text-align: center; }

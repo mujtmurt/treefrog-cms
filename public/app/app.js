@@ -65,7 +65,7 @@ function inputCheck() {
   }
 
   if (enteredInput && notDuplicate) {
-    alert(`Navigation - ${enteredInput} has been created`);
+    // alert(`Navigation - ${enteredInput} has been created`);
 
     navArray.push(lowercaseValue);
     console.log(navArray);
@@ -73,6 +73,7 @@ function inputCheck() {
     $(".modal").css("display", "none");
     $(".text-wrapper").html(TREEFROG_SERVICE.getCreateMainNav());
     $(".btn-holder").html(TREEFROG_SERVICE.getSavePageInfo());
+    // $(".btn-holder").html("");
     $(".outputValue").html(`Nav > ${enteredInput}`);
   } else if (!enteredInput) {
     alert("Please enter the name for your navigation.");
@@ -105,6 +106,12 @@ function quillEditor() {
       toolbar: toolbarOptions
     },
     theme: "snow"
+  });
+
+  $(".savePage").click(function(e) {
+    e.preventDefault();
+    var justHTML = quill.root.innerHTML;
+    $("#quillContent").html(justHTML);
   });
 }
 

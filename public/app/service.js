@@ -50,13 +50,14 @@ var TREEFROG_SERVICE = (function() {
 
     <h3 class="outputValue"></h3>
 
-    <div id="editor"></div>`;
+    <div id="editor"></div>
+    <div id="quillContent"></div>`;
 
     return createdNav;
   };
 
   var _getSavePageInfo = function() {
-    var savePage = `<span class="btn btn-dark save-page">Save Page Info</span>`;
+    var savePage = `<span class="btn btn-dark savePage">Save Page Info</span>`;
 
     return savePage;
   };
