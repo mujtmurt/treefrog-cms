@@ -17,6 +17,10 @@ h6,
 p {
   margin-bottom: 16px; }
 
+a {
+  text-decoration: none;
+  color: #393c40; }
+
 .btn {
   border-radius: 10px;
   height: 50px;
@@ -121,6 +125,13 @@ p {
       text-decoration: none;
       text-transform: uppercase; }
 
+.displayNavigation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+  .displayNavigation #delete {
+    margin-bottom: 1.6rem; }
+
 .content-wrapper {
   color: #393c40;
   padding: 110px 30px 30px 30px; }
@@ -130,3 +141,36 @@ p {
 
 .ql-align-center {
   text-align: center; }
+
+.ql-font-serif {
+  font-family: sans-serif; }
+
+.ql-font-monospace {
+  font-family: monospace; }
+
+.ql-align-center {
+  text-align: center; }
+
+.ql-align-right {
+  text-align: right; }
+
+.ql-syntax {
+  background-color: black;
+  color: white;
+  font-family: monospace;
+  padding: 5px; }
+
+.ql-indent-1 {
+  text-indent: 50px; }
+
+.ql-direction-rtl.ql-align-right {
+  text-align: right; }
+
+.ql-size-small {
+  font-size: 10px; }
+
+.ql-size-large {
+  font-size: 30px; }
+
+.ql-size-huge {
+  font-size: 60px; }

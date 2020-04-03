@@ -1,3 +1,15 @@
+function addMainNav(navName) {
+  console.timeLog("add ", navName);
+
+  let pageFakeData = {
+    navName: navName,
+    content: "<h1> HELLO </h1>",
+    subNavs: []
+  };
+
+  TREEFROG_SERVICE.saveData(pageFakeData);
+}
+
 function initButtons() {
   $("#home").click(function() {
     $("#home div").addClass("active");
@@ -28,8 +40,12 @@ function addHomeListener() {
 
 function createMainNav() {
   $("#createMainNav").click(function() {
-    inputCheck();
-    quillEditor();
+    var enteredInput = document.getElementById("navInput").value;
+
+    console.log("nav name ", enteredInput);
+    TREEFROG_SERVICE.checkMainNavName(enteredInput, addMainNav);
+    // inputCheck();
+    // quillEditor();
   });
 }
 
@@ -54,7 +70,9 @@ function toggleModal() {
 function inputCheck() {
   var enteredInput = document.getElementById("navInput").value;
   var lowercaseValue = enteredInput.toLowerCase();
-  var navArray = ["home", "about", "products"];
+
+  // var navArray = ["home", "about", "products"];
+
   var notDuplicate = true;
 
   for (var i = 0; i < navArray.length; i++) {
@@ -119,4 +137,5 @@ $(document).ready(function() {
   initButtons();
   addHomeListener();
   createMainNav();
+  TREEFROG_SERVICE.initFirebase();
 });

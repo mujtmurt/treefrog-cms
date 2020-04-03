@@ -54,3 +54,14 @@
     }
   }
 }
+
+.displayNavigation {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  #delete {
+    margin-bottom: 1.6rem;
+  }
+}
