@@ -4,7 +4,11 @@ This is a CMS created with Firebase and jQuery. We are just showing how to creat
 
 ## Application Link
 
-<a href="https://treefrog-cms-585.firebaseapp.com/addSave.html" target="_blank">https://treefrog-cms-585.firebaseapp.com/addSave.html</a>
+<a href="https://treefrog-cms-585.firebaseapp.com/addSave.html">https://treefrog-cms-585.firebaseapp.com/addSave.html</a>
+
+## Github Link
+
+<a href="https://github.com/mujtmurt/treefrog-cms">https://github.com/mujtmurt/treefrog-cms</a>
 
 ## Steps to turn this into a Firebase project
 
